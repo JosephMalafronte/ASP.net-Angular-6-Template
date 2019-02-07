@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CardFancyComponent } from './home/cards/cardFancy.component';
+import { PopupModal } from './home/home.component';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { CardFancyComponent } from './home/cards/cardFancy.component';
     CounterComponent,
     FetchDataComponent,
     CardFancyComponent,
+    PopupModal
   ],
+  entryComponents: [PopupModal],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,

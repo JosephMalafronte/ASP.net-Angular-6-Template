@@ -1,6 +1,6 @@
 
 <mat-toolbar color="primary">
-  <span>Application Title</span>
+  <span>Angular 6 MVC w/ Material Design</span>
 
   <!-- This fills the remaining space of the current row -->
   <span class="example-fill-remaining-space"></span>
@@ -12,10 +12,13 @@
 
 <card-fancy-example></card-fancy-example>
 
-<h1>Hello, Test!</h1>
+<h1>Hello World!</h1>
 <p>Welcome to your new single-page application, built with:</p>
-<button mat-raised-button color="warn">Warn</button>
+<button id="myButton"  mat-raised-button color="warn" (click)="openDialog()">Warn</button>
 <br />
+<br />
+<p>Your favorite animal is {{animal}}</p>
+
 <div class="mat-app-background">
   <mat-slider></mat-slider>
 </div>

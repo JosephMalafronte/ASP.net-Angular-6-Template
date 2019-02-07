@@ -1,0 +1,25 @@
+@import '../node_modules/@angular/material/theming';
+
+
+@include mat-core();
+
+
+$my-theme-primary: mat-palette($mat-blue);
+$my-theme-accent: mat-palette($mat-blue, A200, A100, A400);
+
+$my-theme-warn: mat-palette($mat-purple);
+
+$my-theme-theme: mat-light-theme(
+  $my-theme-primary,
+  $my-theme-accent,
+  $my-theme-warn
+);
+
+#myButton {
+  width: 400px;
+  height: 40px;
+  min-width: initial;
+}
+
+
+@include angular-material-theme($my-theme-theme);

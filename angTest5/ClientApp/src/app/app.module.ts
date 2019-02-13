@@ -9,6 +9,7 @@ import { AngMaterialModule } from './angmaterial';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { NavToolbarComponent } from './nav-toolbar/nav-toolbar.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
@@ -20,6 +21,7 @@ import { PopupModal } from './home/home.component';
   declarations: [
     AppComponent,
     NavMenuComponent,
+    NavToolbarComponent,
     HomeComponent,
     CounterComponent,
     FetchDataComponent,

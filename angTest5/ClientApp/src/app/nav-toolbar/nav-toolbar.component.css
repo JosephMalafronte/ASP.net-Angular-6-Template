@@ -1,0 +1,30 @@
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+.toolbarHolder {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  height: 70px;
+  z-index: 100;
+}
+
+#toolbar1 {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  height: 70px;
+}
+
+#toolbar2 {
+  overflow: hidden;
+  background-color: #172e52;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 70px; /* Position the navbar at the top of the page */
+  height: 50px;
+}

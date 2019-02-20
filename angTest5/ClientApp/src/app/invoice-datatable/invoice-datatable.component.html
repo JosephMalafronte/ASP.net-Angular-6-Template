@@ -1,0 +1,54 @@
+<div class="example-header">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+</div>
+
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="angDataSource" matSort>
+
+    <!--- Note that these columns can be defined in any order.
+    The actual rendered columns are set as a property on the row definition" -->
+    <!-- Date Received Column -->
+    <ng-container matColumnDef="dateReceived">
+      <mat-header-cell *matHeaderCellDef > <span class="tableHeading">Date Received</span> </mat-header-cell>
+      <mat-cell *matCellDef="let angDataPoint"> <span>{{angDataPoint.dateReceived}}</span></mat-cell>
+    </ng-container>
+
+    <!-- Source Column -->
+    <ng-container matColumnDef="source">
+      <mat-header-cell *matHeaderCellDef> <span class="tableHeading">Source</span> </mat-header-cell>
+      <mat-cell *matCellDef="let angDataPoint"> <span>{{angDataPoint.source}}</span> </mat-cell>
+    </ng-container>
+
+    <!-- Current Status Column -->
+    <ng-container matColumnDef="currentStatus">
+      <mat-header-cell *matHeaderCellDef><span class="tableHeading">Current Status</span></mat-header-cell>
+      <mat-cell *matCellDef="let angDataPoint"> <span>{{angDataPoint.currentStatus}}</span> </mat-cell>
+    </ng-container>
+
+    <!-- Invoice Number Column -->
+    <ng-container matColumnDef="invoiceNumber">
+      <mat-header-cell *matHeaderCellDef><span class="tableHeading">Invoice Number</span></mat-header-cell>
+      <mat-cell *matCellDef="let angDataPoint"> <span>{{angDataPoint.invoiceNumber}}</span> </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;" matRipple class="element-row" [cdkDetailRow]="row" [cdkDetailRowTpl]="tpl">
+    </mat-row>
+
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+</div>
+
+
+<ng-template #tpl let-angDataPoint>
+  <div class="mat-row detail-row" [@detailExpand] style="overflow: hidden;">
+    The symbol for {{angDataPoint.source}} is {{angDataPoint.description}}
+  </div>
+</ng-template>
+
+<ng-template #row>
+
+</ng-template>

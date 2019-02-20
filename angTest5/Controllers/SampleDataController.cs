@@ -14,6 +14,31 @@ namespace angTest5.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
+        public int numTracker = 0;
+
+        public class exampleData
+        {
+            public string dateReceived { get; set; }
+            public string source { get; set; }
+            public string currentStatus { get; set; }
+            public int invoiceNumber { get; set; }
+            public string description { get; set; }
+        }
+
+        [HttpGet("[action]")]
+        public IEnumerable<exampleData> exampleDatas()
+        {
+            numTracker = numTracker + 1;
+            return Enumerable.Range(1, 5).Select(index => new exampleData
+            {
+                dateReceived = "May " + numTracker.ToString(),
+                source = "ACI",
+                currentStatus = "Received",
+                invoiceNumber = numTracker,
+                description = "test"
+            });
+        }
+
         [HttpGet("[action]")]
         public IEnumerable<WeatherForecast> WeatherForecasts()
         {

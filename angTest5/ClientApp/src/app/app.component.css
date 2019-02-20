@@ -8,3 +8,10 @@
 #mainBody {
   padding-top:115px;
 }
+
+@media print {
+  #toolbarRow {
+    display: none !important;
+  }
+}
+

@@ -1,0 +1,76 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  min-width: 300px;
+  width:750px;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+/deep/ .mat-icon-button {
+  color: #112e51;
+}
+
+
+.element-row {
+  position: relative;
+}
+
+  .element-row:not(.expanded) {
+    cursor: pointer;
+  }
+
+    .element-row:not(.expanded):hover {
+      background: #112e51;
+    }
+
+    .element-row:not(.expanded):hover span {
+      color: white;
+    }
+
+  .element-row.expanded {
+    border-bottom-color: transparent;
+  }
+
+
+.element-row.expanded[_ngcontent-c4] {
+  background: #112e51;
+}
+
+    .element-row.expanded[_ngcontent-c4] span {
+      color: white;
+    }
+
+    .element-row.expanded[_ngcontent-c4]:hover {
+      cursor: pointer;
+    }
+
+  table {
+    width: 100%;
+  }
+
+.mat-form-field {
+  font-size: 14px;
+  width: 750px;
+}
+
+td, th {
+  width: 25%;
+}
+
+
+.tableHeading {
+  font-size: 14px;
+  font-weight: bold;
+  color: #112e51;
+}
+
+
+mat-row detail-row ng-tns-c4-0 ng-trigger ng-trigger-detailExpand ng-star-inserted ng-animating {
+  background: #112e51;
+}
+

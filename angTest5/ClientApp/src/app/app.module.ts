@@ -15,6 +15,11 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CardFancyComponent } from './home/cards/cardFancy.component';
 import { PopupModal } from './home/home.component';
+import { InvoiceDatatableComponent } from './invoice-datatable/invoice-datatable.component';
+import { CdkDetailRowDirective } from './invoice-datatable/cdk-detail-row.directive';
+
+
+
 
 
 @NgModule({
@@ -26,7 +31,9 @@ import { PopupModal } from './home/home.component';
     CounterComponent,
     FetchDataComponent,
     CardFancyComponent,
-    PopupModal
+    PopupModal,
+    InvoiceDatatableComponent,
+    CdkDetailRowDirective
   ],
   entryComponents: [PopupModal],
   imports: [

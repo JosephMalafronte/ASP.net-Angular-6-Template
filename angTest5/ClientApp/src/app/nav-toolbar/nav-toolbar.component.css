@@ -27,4 +27,7 @@
   position: fixed; /* Set the navbar to fixed position */
   top: 70px; /* Position the navbar at the top of the page */
   height: 50px;
+  font-size: 15px;
 }
+
+

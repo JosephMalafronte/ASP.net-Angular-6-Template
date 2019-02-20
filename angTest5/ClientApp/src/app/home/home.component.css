@@ -1,0 +1,13 @@
+
+#printScreen{
+    display: none;
+  }
+
+@media print{
+  #printScreen{
+    display: unset !important;
+  }
+  #mainScreen{
+    display: none !important;
+  }
+}
